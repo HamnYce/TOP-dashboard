@@ -167,14 +167,49 @@ article {
 }
 
 .project-card {
-  width: 250px;
-  height: 200px;
-
   background-color: grey;
+  padding: 20px 10px 5px 15px;
+  width: 225px;
+  height: fit-content;
+  border-radius: 4px;
 }
 
-.project-cards-container {
-  
+.project-card > .card-bio > h6 {
+  font-size: 0.9rem;
+}
+
+.project-card > .card-bio > p {
+  font-size: 0.7rem;
+}
+
+.project-card > .card-icons {
+  padding: 10px;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: flex-end;
+  grid-gap: 10px;
+}
+
+.project-card > .card-icons > * {
+  border-radius: 25px;
+}
+
+.star-icon {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+}
+
+.eye-icon {
+  background-color: black;
+  width: 25px;
+  height: 25px;
+}
+
+.share-icon {
+  background-color: purple;
+  width: 25px;
+  height: 25px;
 }
 
 .social-media-container {
