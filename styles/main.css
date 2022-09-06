@@ -125,9 +125,70 @@ header {
 }
 
 .sidebar {
-  background-color: blue;
+  background-color: blueviolet;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
+  padding-left: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 1fr;
+}
+
+.sidebar > .dashboard-title {
+  background-color: tomato;
+  height: 50px;
+
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  align-items: center;
+  grid-gap: 12px;
+}
+
+.sidebar > .dashboard-title > .dashboard-icon {
+  background-color: black;
+  height: 25px;
+  width: 25px;
+}
+
+.sidebar > nav {
+  padding-left:5px;
+}
+
+.sidebar > nav > .menu, .sidebar > nav > .utilities {
+  margin-top: 40px;
+  background-color: green;
+
+  display: grid;
+  list-style: none;
+}
+
+.sidebar > nav > .menu > li, .sidebar > nav > .utilities > li {
+  border: 1px solid white;
+  height: 40px;
+
+  display: grid;
+  align-items: center;
+}
+
+.sidebar > nav > .menu > li > a, .sidebar > nav > .utilities > li > a {
+  display: block;
+  width: 100%;
+  height: 80%;
+
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+}
+
+.sidebar > nav > .menu > li > a > div, .sidebar > nav > .utilities > li > a > div {
+  background-color: black;
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar > nav > .utilities {
+  margin-top: 50px;
 }
 
 article {
@@ -141,7 +202,8 @@ article {
 }
 
 .projects-container {
-  padding: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
   width: 100%;
   height: 100%;
   background-color: red;
@@ -170,7 +232,7 @@ article {
   background-color: grey;
   padding: 20px 10px 5px 15px;
   width: 225px;
-  height: fit-content;
+  height: 130px;
   border-radius: 4px;
 }
 
@@ -213,7 +275,52 @@ article {
 }
 
 .social-media-container {
+  padding: 15px;
   background: green;
+  display: grid;
+  grid-template-rows: minmax(200px, 1fr) minmax(150px, 1fr);
+  grid-template-columns: minmax(250px, 1fr);
+}
+
+.social-media-container > .announcements-container {
+  padding: 10px;
+  padding-top: 0;
+  background-color: indianred;
+  width: 90%;
+  height: fit-content;
+}
+
+.social-media-container > .announcements-container > p {
+  height: 50px;
+  display: grid;
+  align-items: center;
+}
+
+.social-media-container > .announcements-container > .card {
+  padding: 15px 20px 0px 20px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.social-media-container > .announcements-container > .card > .card-part {
+  display: grid;
+  align-content: center;
+}
+
+.social-media-container > .announcements-container > .card > .card-part > h6 {
+  font-size: 0.8rem;
+}
+
+.social-media-container > .announcements-container > .card > .card-part > p {
+  font-size: 0.6rem;
+}
+
+.social-media-container > .trending-container {
+  background-color: hotpink;
 }
 
 footer {

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/main.css">
   <title>Document</title>
+  <script async src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -14,17 +15,19 @@
 
     <header>
       <div class="left-header">
-          <input type="search" placeholder="Search...">
-          <div class="profile-icon"></div>
-          <p>Hi there,</p>
-          <h1>Hamad Bouabbas (<a href="https://www.github.com/HamnYce">@HamnYce</a>)</h1>
+        <input type="search" placeholder="Search...">
+        <div class="profile-icon"></div>
+        <p>Hi there,</p>
+        <h1>Hamad Bouabbas (<a
+            href="https://www.github.com/HamnYce">@HamnYce</a>)</h1>
       </div>
 
       <div class="right-header">
         <div class="profile-stuff">
           <div class="bell-icon"></div>
           <div class="profile-icon"></div>
-          <p class="profile-name"><a href="https://www.github.com/HamnYce">HamnYce</a></p>
+          <p class="profile-name"><a
+              href="https://www.github.com/HamnYce">HamnYce</a></p>
         </div>
 
         <div class="profile-links-container">
@@ -45,34 +48,71 @@
     </header>
 
     <div class="sidebar">
-      <h3>Dashboard</h3>
+      <div class="dashboard-title">
+        <div class="dashboard-icon">
+          <!-- TODO: use grid to make this icon -->
+        </div>
+        <h3>Dashboard</h3>
+      </div>
+
       <nav>
         <ul class="menu">
-          <li>Home</li>
-          <li>Profile</li>
-          <li>Messages</li>
-          <li>History</li>
-          <li>Tasks</li>
-          <li>Communities</li>
+          <li><a href="#">
+              <div class="home-icon"></div>
+              <p>Home</p>
+            </a></li>
+          <li><a href="#">
+              <div class="profile-icon"></div>
+              Profile
+            </a></li>
+          <li><a href="#">
+              <div class="messages-icon"></div>
+              Messages
+            </a></li>
+          <li><a href="#">
+              <div class="history-icon"></div>
+              History
+            </a></li>
+          <li><a href="#">
+              <div class="tasks-icon"></div>
+              Tasks
+            </a></li>
+          <li><a href="#">
+              <div class="communities-icon"></div>
+              Communities
+            </a></li>
         </ul>
+          <!-- TODO: change rows to be the same height -->
         <ul class="utilities">
-          <li>Settings</li>
-          <li>Support</li>
-          <li>Privacy</li>
+          <li><a href="#">
+              <div class="setings-icon"></div>
+              Settings
+            </a></li>
+          <li><a href="#">
+              <div class="support-icon"></div>
+              Support
+            </a></li>
+          <li><a href="#">
+              <div class="privacy-icon"></div>
+              Privacy
+            </a></li>
         </ul>
       </nav>
     </div>
 
     <article>
       <div class="projects-container">
+
         <h1>Your Projects</h1>
 
         <div class="project-cards-container">
-
           <div class="project-card">
             <div class="card-bio">
               <h6><b>Super Cool Project</b></h6>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim error laboriosam nobis, quia reprehenderit cupiditate exercitationem ipsa eum vitae, unde aperiam voluptates, dolorem quaerat sed.</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
+                error laboriosam nobis, quia reprehenderit cupiditate
+                exercitationem ipsa eum vitae, unde aperiam voluptates, dolorem
+                quaerat sed.</p>
             </div>
             <div class="card-icons">
               <div class="star-icon"></div>
@@ -80,9 +120,8 @@
               <div class="share-icon"></div>
             </div>
           </div>
-
         </div>
-        
+
       </div>
 
       <div class="social-media-container">
@@ -90,17 +129,23 @@
         <div class="announcements-container">
           <p><b>Announcements</b></p>
           <div class="card">
-            <div class="card-part">
+            <div class="card-part" style="border-bottom: 1px solid black;">
               <h6>Title 1</h6>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae facilis placeat accusantium repudiandae. Commodi perferendis, sunt debitis et incidunt odit. Culpa alias saepe exercitationem!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                vitae facilis placeat accusantium repudiandae. Commodi
+                perferendis, sunt debitis et incidunt odit. Culpa alias saepe
+                exercitationem!</p>
             </div>
-            <div class="card-part">
+            <div class="card-part" style="border-bottom: 1px solid black;">
               <h6>Title 2</h6>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel earum sed modi reiciendis repellendus?</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid vel earum sed modi reiciendis repellendus?</p>
             </div>
             <div class="card-part">
               <h6>Title 6</h6>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius perferendis omnis provident accusamus dolor facilis libero, ipsam ratione blanditiis in?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                perferendis omnis provident accusamus dolor facilis libero,
+                ipsam ratione blanditiis in?</p>
             </div>
           </div>
         </div>
