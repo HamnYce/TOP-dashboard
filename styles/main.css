@@ -89,7 +89,6 @@ header {
 .right-header > .profile-stuff > .bell-icon {
   width: 20px;
   height: 20px;
-  background-color: blue;
 }
 
 .right-header > .profile-stuff > .profile-icon {
@@ -140,22 +139,22 @@ header {
   height: 50px;
 
   display: grid;
-  grid-template-columns: 25px 1fr;
+  grid-template-columns: 40px 1fr;
   align-items: center;
   grid-gap: 12px;
 }
 
 .sidebar > .dashboard-title > .dashboard-icon {
-  background-color: black;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
 }
 
 .sidebar > nav {
-  padding-left:5px;
+  padding-left: 5px;
 }
 
-.sidebar > nav > .menu, .sidebar > nav > .utilities {
+.sidebar > nav > .menu,
+.sidebar > nav > .utilities {
   margin-top: 40px;
   background-color: green;
 
@@ -163,7 +162,8 @@ header {
   list-style: none;
 }
 
-.sidebar > nav > .menu > li, .sidebar > nav > .utilities > li {
+.sidebar > nav > .menu > li,
+.sidebar > nav > .utilities > li {
   border: 1px solid white;
   height: 40px;
 
@@ -171,7 +171,8 @@ header {
   align-items: center;
 }
 
-.sidebar > nav > .menu > li > a, .sidebar > nav > .utilities > li > a {
+.sidebar > nav > .menu > li > a,
+.sidebar > nav > .utilities > li > a {
   display: block;
   width: 100%;
   height: 80%;
@@ -181,8 +182,8 @@ header {
   align-items: center;
 }
 
-.sidebar > nav > .menu > li > a > div, .sidebar > nav > .utilities > li > a > div {
-  background-color: black;
+.sidebar > nav > .menu > li > a > div,
+.sidebar > nav > .utilities > li > a > div {
   width: 25px;
   height: 25px;
 }
@@ -257,19 +258,16 @@ article {
 }
 
 .star-icon {
-  background-color: white;
   width: 25px;
   height: 25px;
 }
 
 .eye-icon {
-  background-color: black;
   width: 25px;
   height: 25px;
 }
 
 .share-icon {
-  background-color: purple;
   width: 25px;
   height: 25px;
 }
@@ -321,6 +319,53 @@ article {
 
 .social-media-container > .trending-container {
   background-color: hotpink;
+
+  display: grid;
+  grid-template-rows: 35px 1fr;
+}
+
+.social-media-container > .trending-container > .trending-cards-container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.social-media-container
+  > .trending-container
+  > .trending-cards-container
+  > .account-card {
+  width: 90%;
+  height: 90%;
+  background-color: grey;
+
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+}
+
+.social-media-container
+  > .trending-container
+  > .trending-cards-container
+  > .account-card
+  > .account-image {
+    justify-self: center;
+  background-color: black;
+  height: 70%;
+  width: 70%;
+}
+
+.social-media-container
+  > .trending-container
+  > .trending-cards-container
+  > .account-card
+  > .account-info {
+    font-size: 0.8rem;
+    background-color: green;
 }
 
 footer {
