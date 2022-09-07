@@ -320,13 +320,19 @@ article {
 .social-media-container > .trending-container {
   background-color: hotpink;
 
+  
   display: grid;
   grid-template-rows: 35px 1fr;
+  justify-items: center;
 }
 
-.social-media-container > .trending-container > .trending-cards-container {
+.social-media-container
+  > .trending-container
+  > .trending-cards-container {
   height: 100%;
-  width: 100%;
+  width: 90%;
+  border-radius: 5px;
+  padding-top: 5px;
   background-color: white;
 
   display: grid;
@@ -353,7 +359,7 @@ article {
   > .trending-cards-container
   > .account-card
   > .account-image {
-    justify-self: center;
+  justify-self: center;
   background-color: black;
   height: 70%;
   width: 70%;
