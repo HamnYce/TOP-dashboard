@@ -1,7 +1,28 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url('assets/ubuntu-font/Ubuntu-Regular.ttf')
+}
+
+/* TODO: 
+        change color scheme to the normal color scheme
+        add shadows
+        add color changes on hover for text and cards
+
+        profile pictures for my header profile pictures
+        social media container, bold title and card distnace too large
+        project cards size a bit weird (needs to be a bit bigger
+        search bar
+*/
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Ubuntu, Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 body {
@@ -12,14 +33,15 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 210, 210);
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 2fr 12fr 1fr;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 2fr 12fr 0.5fr;
+}
+
+.project-card, header, .announcements-container,  {
 }
 
 header {
-  padding: 5px;
   grid-row: 1 / 2;
   grid-column: 2 / -1;
   background-color: red;
@@ -30,7 +52,7 @@ header {
 
 .left-header {
   padding: 10px;
-  background-color: yellow;
+  background-color: aliceblue;
 
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -54,7 +76,8 @@ header {
 
   width: 60px;
   height: 60px;
-  background-color: black;
+  background-image: url(../assets/profile-pics/profile-pic.jpeg);
+  background-size: 100%;
   border-radius: 50%;
 
   grid-area: 2 / 1 / 4 / 2;
@@ -62,6 +85,7 @@ header {
 
 .left-header > p {
   font-size: 0.8em;
+  font-weight: bold;
   align-self: flex-end;
   grid-area: 2 / 2 / 3 / -1;
 }
@@ -72,7 +96,7 @@ header {
 }
 
 .right-header {
-  background-color: orange;
+  background-color: aliceblue;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -95,29 +119,35 @@ header {
   width: 35px;
   height: 35px;
   border-radius: 20px;
-  background-color: black;
+
+  background-image: url(../assets/profile-pics/profile-pic.jpeg);
+  background-size: 100%;
 }
 
 .right-header > .profile-stuff > .profile-name {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .right-header > .profile-links-container > ul {
   list-style: none;
   height: 100%;
   width: 100%;
+
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .right-header > .profile-links-container > ul > a {
-  width: 5rem;
-  height: 1.9rem;
-  background-color: black;
+  width: 120px;
+  height: 40px;
+  background-color: blueviolet;
   color: white;
-  border-radius: 25px;
+  border-radius: 50px;
   font-size: 0.9rem;
+
   display: grid;
   justify-content: center;
   align-items: center;
@@ -128,6 +158,7 @@ header {
   grid-row: 1 / -1;
   grid-column: 1 / 2;
   padding-left: 15px;
+  padding-top: 15px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -135,13 +166,14 @@ header {
 }
 
 .sidebar > .dashboard-title {
-  background-color: tomato;
+  color: white;
   height: 50px;
 
   display: grid;
   grid-template-columns: 40px 1fr;
   align-items: center;
   grid-gap: 12px;
+  font-size: 1.4rem;
 }
 
 .sidebar > .dashboard-title > .dashboard-icon {
@@ -156,7 +188,6 @@ header {
 .sidebar > nav > .menu,
 .sidebar > nav > .utilities {
   margin-top: 40px;
-  background-color: green;
 
   display: grid;
   list-style: none;
@@ -164,7 +195,6 @@ header {
 
 .sidebar > nav > .menu > li,
 .sidebar > nav > .utilities > li {
-  border: 1px solid white;
   height: 40px;
 
   display: grid;
@@ -173,12 +203,15 @@ header {
 
 .sidebar > nav > .menu > li > a,
 .sidebar > nav > .utilities > li > a {
+  color: white;
   display: block;
   width: 100%;
   height: 80%;
+  font-weight: bolder;
+  font-size: 1.2rem;
 
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 45px 1fr;
   align-items: center;
 }
 
@@ -199,7 +232,7 @@ article {
   grid-column: 2 / -1;
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 16fr 5fr;
 }
 
 .projects-container {
@@ -207,7 +240,7 @@ article {
   padding-left: 15px;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: lightgrey;
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-columns: 1fr;
@@ -226,15 +259,15 @@ article {
   grid-row: 2 / 3;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 
 .project-card {
-  background-color: grey;
-  padding: 20px 10px 5px 15px;
-  width: 225px;
-  height: 130px;
-  border-radius: 4px;
+  background-color: white;
+  padding: 20px 10px 0px 15px;
+  width: 250px;
+  height: 150px;
+  border-radius: 6px;
 }
 
 .project-card > .card-bio > h6 {
@@ -274,18 +307,17 @@ article {
 
 .social-media-container {
   padding: 15px;
-  background: green;
+  background: lightgrey;
   display: grid;
   grid-template-rows: minmax(200px, 1fr) minmax(150px, 1fr);
   grid-template-columns: minmax(250px, 1fr);
 }
 
 .social-media-container > .announcements-container {
+  width: 90%;
+  height: 90%;
   padding: 10px;
   padding-top: 0;
-  background-color: indianred;
-  width: 90%;
-  height: fit-content;
 }
 
 .social-media-container > .announcements-container > p {
@@ -295,31 +327,48 @@ article {
 }
 
 .social-media-container > .announcements-container > .card {
-  padding: 15px 20px 0px 20px;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 5px;
   background-color: white;
   border-radius: 5px;
+  padding: 15px 0px 10px 20px;
+  width: 90%;
+  height: calc(100% - 50px);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(40px, max-content) 1px minmax(40px, max-content) 1px minmax(40px, max-content);
+  grid-gap: 10px;
+}
+
+.social-media-container > .announcements-container > hr {
+  justify-self: center;
 }
 
 .social-media-container > .announcements-container > .card > .card-part {
+  margin-bottom: 10px;
   display: grid;
   align-content: center;
+
+  height: 100%;  
+  width: 90%;
 }
 
 .social-media-container > .announcements-container > .card > .card-part > h6 {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  height: fit-content;
 }
 
 .social-media-container > .announcements-container > .card > .card-part > p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
+  color: #222222;
 }
 
 .social-media-container > .trending-container {
-  background-color: hotpink;
+  padding: 10px;
+  height: 90%;
+  width: 90%;
+}
 
+<<<<<<< HEAD
   
   display: grid;
   grid-template-rows: 35px 1fr;
@@ -333,12 +382,25 @@ article {
   width: 90%;
   border-radius: 5px;
   padding-top: 5px;
+=======
+.social-media-container > .trending-container > p {
+  height: 50px;
+  display: grid;
+  align-items: center;
+}
+
+.social-media-container > .trending-container > .trending-cards-container {
+  height: calc(100% - 50px);
+  width: 90%;
+>>>>>>> 8bf4932 (make colorscheme)
   background-color: white;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
 
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: 1fr;
 }
 
 .social-media-container
@@ -346,8 +408,7 @@ article {
   > .trending-cards-container
   > .account-card {
   width: 90%;
-  height: 90%;
-  background-color: grey;
+  height: 70%;
 
   display: grid;
   grid-template-columns: 50px 1fr;
@@ -361,8 +422,14 @@ article {
   > .account-image {
   justify-self: center;
   background-color: black;
-  height: 70%;
-  width: 70%;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-image: url(../assets/profile-pics/profile-0.jpeg);
+  background-size: 100%;
+  background-clip: clip;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 .social-media-container
@@ -370,12 +437,42 @@ article {
   > .trending-cards-container
   > .account-card
   > .account-info {
+    margin-left: 15px;
     font-size: 0.8rem;
-    background-color: green;
+}
+
+.social-media-container
+  > .trending-container
+  > .trending-cards-container
+  > .account-card
+  > .account-info 
+  > a
+  > p {
+    font-size: 0.8rem;
+}
+
+.social-media-container
+  > .trending-container
+  > .trending-cards-container
+  > .account-card
+  > .account-info 
+  > a
+  > p:nth-child(2) {
+    font-size: 0.75rem;
 }
 
 footer {
-  background-color: brown;
+  background-color: darkgray;
+  height: 100%;
+  width: 100%;
   grid-row: -2 / -1;
   grid-column: 2 / -1;
+
+  display: grid;
+  align-items: center;
+  text-align: center;
+}
+
+footer > p > a {
+  font-style: italic;
 }
