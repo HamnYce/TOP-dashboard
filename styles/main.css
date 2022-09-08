@@ -162,8 +162,8 @@ header {
   background-color: blueviolet;
   grid-row: 1 / -1;
   grid-column: 1 / 2;
-  padding-left: 15px;
-  padding-top: 15px;
+  padding: 15px;
+  padding-bottom: 0;
 
   display: grid;
   grid-template-columns: 1fr;
