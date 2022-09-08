@@ -38,6 +38,7 @@ body {
   grid-template-rows: 2fr 12fr 0.5fr;
 }
 
+/* TODO: add shadow */
 .project-card, header, .announcements-container,  {
 }
 
@@ -368,21 +369,6 @@ article {
   width: 90%;
 }
 
-<<<<<<< HEAD
-  
-  display: grid;
-  grid-template-rows: 35px 1fr;
-  justify-items: center;
-}
-
-.social-media-container
-  > .trending-container
-  > .trending-cards-container {
-  height: 100%;
-  width: 90%;
-  border-radius: 5px;
-  padding-top: 5px;
-=======
 .social-media-container > .trending-container > p {
   height: 50px;
   display: grid;
@@ -392,7 +378,6 @@ article {
 .social-media-container > .trending-container > .trending-cards-container {
   height: calc(100% - 50px);
   width: 90%;
->>>>>>> 8bf4932 (make colorscheme)
   background-color: white;
   padding-top: 20px;
   padding-left: 20px;
