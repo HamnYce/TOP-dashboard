@@ -30,5 +30,5 @@ let arr = [...card_parts]
 arr.forEach(element => {
   let s = element.getElementsByTagName('p').item(0).innerHTML;
   // TODO: string array indexing how?
-  element.getElementsByTagName('p').item(0).innerHTML = s.slice(0, 180) + '...';
+  element.getElementsByTagName('p').item(0).innerHTML = s.slice(0, 120) + '...';
 });
