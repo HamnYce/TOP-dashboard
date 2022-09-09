@@ -155,23 +155,30 @@ header {
 
   display: grid;
   align-items: center;
-  justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.right-header > .profile-links-container > ul > a {
+.right-header > .profile-links-container > ul > li {
   width: 120px;
   height: 40px;
   background-color: blueviolet;
-  color: white;
   border-radius: 50px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
 
-  display: grid;
-  justify-content: center;
-  align-items: center;
 }
+
+.right-header > .profile-links-container > ul > li > a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .sidebar {
   background-color: blueviolet;
